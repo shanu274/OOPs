@@ -1,0 +1,49 @@
+Q: Make Your Own Array List
+
+package OOPS;
+
+import java.util.*;
+
+public class arraylist {
+	
+	
+	public static class Arraylist{
+		int[] arr = new int[2];
+		int idx = 0;
+		int size = 0;
+
+    //to add the value in ArrayList
+		public void add(int ele) {
+			if(size == arr.length) {
+				//if array is full then create new array copy the array value and give the length size double.
+				//int[] brr = new int[arr.length];
+				int[] brr = Arrays.copyOf(arr, arr.length*2);
+			//	arr = new int[brr.length];
+			//	arr = Arrays.copyOf(brr, brr.length);
+				
+				arr = brr;
+			}
+			arr[idx] = ele;
+			idx++;
+			size++;
+			
+		}
+//To set the value of arraylist
+		public void set(int idx, int val) {
+			arr[idx] = val;
+		}	
+		
+	}
+	
+	public static void main(String[] args) {
+		ArrayList arr = new ArrayList();
+		arr.add(2);
+		arr.add(1);
+		System.out.println(arr.size());
+		arr.add(4);
+		System.out.println(arr.size());
+		arr.set(0, 10);
+		System.out.println(arr);
+	}
+
+}
