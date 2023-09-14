@@ -1,0 +1,40 @@
+package OOPS;
+
+public class Employeee {
+	
+	private String name;
+	int RollNo;
+	String email;
+	int pno;
+	String department;
+	
+	public Employeee(String name, int rno, String mail, int pn, String dep) {
+		this.name = name;
+		RollNo = rno;
+		email = mail;
+		pno = pn;
+		department = dep;
+		
+	}
+	
+	void display() {
+		System.out.println(name+ " " + RollNo + " " +email+ " " +pno + " " +department);
+		
+	}
+	
+	public static void main(String[] args) {
+		Employeee E = new Employeee("Riya", 23, "riya@12", 97879644, "CSE");
+		E.display();
+		Employeee E1 = new Employeee("RK", 20, "rk@12", 897648734, "IT");
+		E1.display();
+		Employeee E2 = new Employeee("Diya", 24, "diya@12", 97307364, "EJ");
+		E2.display();
+		Employeee E3 = new Employeee("Diksha", 26, "diks@12", 978796544, "Civil");
+		E3.display();
+		Employeee E4 = new Employeee("Shalu", 27, "shail@12", 875796544, "Mech");
+		E4.display();
+		//System.out.print(E.display());
+		
+	}
+
+}
